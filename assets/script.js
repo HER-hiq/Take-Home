@@ -1,5 +1,5 @@
-const team1Score = document.querySelector(".timl_poin .poin_l");
-const team2Score = document.querySelector(".timr_poin .poin_r");
+const team1Score = document.querySelector(".timl_poin .poinl");
+const team2Score = document.querySelector(".timr_poin .poinr");
 
 team1Score.addEventListener("pointerdown", handlePointerDown);
 team1Score.addEventListener("pointerup", handlePointerUp);
@@ -22,19 +22,26 @@ function handlePointerUp(event) {
   const diffY = initialY - currentY;
 
   if (diffY > 0) {
-    if (event.target.classList.contains("poin_l")) {
-      team1Score.textContent = parseInt(team1Score.textContent) +1;
-    } else if (event.target.classList.contains("poin_r")) {
-      team2Score.textContent = parseInt(team2Score.textContent) +1;
-    }
-  } else {
-    if (event.target.classList.contains("poin_l")) {
-      if (team1Score.textContent > 0) {
-        team1Score.textContent = parseInt(team1Score.textContent) -1;
+    
+    if (event.target.classList.contains("poinl")) {
+      if (team1Score.textContent < 21) {
+        team1Score.textContent = parseInt(team1Score.textContent) + 1;
       }
-    } else if (event.target.classList.contains("poin_r")) {
+    } else if (event.target.classList.contains("poinr")) {
+      if (team2Score.textContent < 21) {
+        team2Score.textContent = parseInt(team2Score.textContent) + 1;
+      }
+    }
+    
+  } else {
+    
+    if (event.target.classList.contains("poinl")) {
+      if (team1Score.textContent > 0) {
+        team1Score.textContent = parseInt(team1Score.textContent) - 1;
+      }
+    } else if (event.target.classList.contains("poinr")) {
       if (team2Score.textContent > 0) {
-        team2Score.textContent = parseInt(team2Score.textContent) -1;
+        team2Score.textContent = parseInt(team2Score.textContent) - 1;
       }
     }
   }
@@ -62,19 +69,26 @@ function handleTouchEnd(event) {
   const diffY = initialY - currentY;
 
   if (diffY > 0) {
-    if (event.target.classList.contains("poin_l")) {
-      team1Score.textContent = parseInt(team1Score.textContent) +1;
-    } else if (event.target.classList.contains("poin_r")) {
-      team2Score.textContent = parseInt(team2Score.textContent) +1;
-    }
-  } else {
-    if (event.target.classList.contains("poin_l")) {
-      if (team1Score.textContent > 0) {
-        team1Score.textContent = parseInt(team1Score.textContent) -1;
+    
+    if (event.target.classList.contains("poinl")) {
+      if (team1Score.textContent < 21) {
+        team1Score.textContent = parseInt(team1Score.textContent) + 1;
       }
-    } else if (event.target.classList.contains("poin_r")) {
+    } else if (event.target.classList.contains("poinr")) {
+      if (team2Score.textContent < 21) {
+        team2Score.textContent = parseInt(team2Score.textContent) + 1;
+      }
+    }
+    
+  } else {
+    
+    if (event.target.classList.contains("poinl")) {
+      if (team1Score.textContent > 0) {
+        team1Score.textContent = parseInt(team1Score.textContent) - 1;
+      }
+    } else if (event.target.classList.contains("poinr")) {
       if (team2Score.textContent > 0) {
-        team2Score.textContent = parseInt(team2Score.textContent) -1;
+        team2Score.textContent = parseInt(team2Score.textContent) - 1;
       }
     }
   }
