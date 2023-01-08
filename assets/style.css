@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.tim_l{
+    flex: 1;
+    height: 100%;
+    background-color: black;
+    margin: 0;
+}
+
+.tim_r {
+    flex: 1;
+    height: 100%;
+    background-color: #222325;
+    margin: 0;
+}
+
+.poin_l {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 97px;
+    color: white;
+    position: absolute;
+    top: 35%;
+    left:20%;
+}
+
+.poin_r {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 97px;
+    color: white;
+    position: absolute;
+    left:70%;
+    top: 35%;
+}
+
+.player {
+    margin-top: 86%;
+}
+
+.player_l {
+    display: flex;
+}
+
+.player_r {
+    display: flex;
+}
+
+.nama_l {
+    width: 100%;
+    height: 24px;
+    text-align: left;
+    line-height: 24px;
+    color: white;
+    background: #222325;
+}
+
+.nama_r {
+    width: 100%;
+    height: 24px;
+    text-align: left;
+    line-height: 24px;
+    color: white;
+    background: #535456;
+}
+
+.position {
+    text-align: center;
+    line-height: 24px;
+    width: 24px;
+    height: 24px;
+    top: 0px;
+    left: 156px;
+    background: #FFD600;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 980px) and (orientation: landscape){
+    .container {
+        height: 100%;
+        font-size: 16px;
+    }
+    .player {
+        margin-top: 89%;
+    }
+    .poin_l, .poin_r {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        font-size: 10px;
+    }
+    .player {
+        margin-top: 100%;
+    }
+    .poin_l, .poin_r {
+        font-size: 50px;
+    }
+}
